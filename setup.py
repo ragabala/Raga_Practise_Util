@@ -16,7 +16,7 @@ setup(
         license='TEST',
         install_requires = requirements,
         classifiers = [
-                'Development Status :: 2 - Pre-Alpha,',
+                'Development Status :: 2 - Pre-Alpha',
                 'Operating System :: POSIX :: Linux',
                 'License :: Freeware',
                 'Programming Language :: Python :: 2.7',
