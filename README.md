@@ -1,4 +1,6 @@
 # Raga_Practise_Util
+This is a Python Packaging Helper Environment that helps beginner's in python get acquainted with the concepts of Building,Packages and Managing them. 
+This tutorial gives beginners a complete flow of how python packages are done in the industries.
 
 Please do the following:
 
@@ -51,8 +53,7 @@ Please do the following:
    Do not use the `assertTrue` method for these assertions. There are other,
    more targeted methods, as mentioned in step 3. Verify that the tests pass.
 9. Add `extras_require` to `setup.py`, and create a "dev" section that lists
-   "pylint." See the [Pulp Smash
-   `setup.py`](https://github.com/PulpQE/pulp-smash/blob/master/setup.py) for an
+   "pylint." See the [docs](http://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-extras-optional-features-with-their-own-dependencies) for an
    example of how to do this. Verify that `pip install --editable .[dev]` pulls
    in pylint. You can verify this with `pip freeze`.
 10. Execute `pylint my_package`. Fix all warnings.
@@ -60,3 +61,4 @@ Please do the following:
     Create a new one. Install your Python package into this virtualenv. Verify that
     you can move to a different directory and successfully execute the tests, e.g.
     with `cd ~ && python -m unittest my_package.tests`.
+12. Once Done with managing the packages locally, The package can be distributed to the remote. This works by creating [aPypI](https://pypi.org/account/register/) account first. Install twine `pip install twine`. Setting up the Build files using `python setup.py sdist` and `pip install wheel` followed by `python setup.py bdist_wheel --universal`. Then run the upload by using `twine upload dist/*`. for more infor refer [docs](https://packaging.python.org/guides/distributing-packages-using-setuptools/#id77) 
