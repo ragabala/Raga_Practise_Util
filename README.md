@@ -62,3 +62,5 @@ Please do the following:
     you can move to a different directory and successfully execute the tests, e.g.
     with `cd ~ && python -m unittest my_package.tests`.
 12. Once Done with managing the packages locally, The package can be distributed to the remote. This works by creating [aPypI](https://pypi.org/account/register/) account first. Install twine `pip install twine`. Setting up the Build files using `python setup.py sdist` and `pip install wheel` followed by `python setup.py bdist_wheel --universal`. Then run the upload by using `twine upload dist/*`. for more infor refer [docs](https://packaging.python.org/guides/distributing-packages-using-setuptools/#id77) 
+13. The above step is used for installing the package. However to install and make the packages available on import statements, use packages=setuptools.find_packages() in the ``setup.py`` file.
+
